@@ -6,6 +6,16 @@ class SnapcastClient extends JsonRpcClient {
 		return response.result;
 	}
 
+	async getGroups() {
+		const status = await this.getStatus();
+		return status.server.groups;
+	}
+
+	async getClients() {
+		const groups = await this.getGroups();
+		return groups.flatMap((group) => group.clients);
+	}
+
 	async setClientMute(clientId, muted) {
 		const response = await this.send("Client.SetVolume", {
 			id: clientId,
