@@ -1,7 +1,7 @@
 const events = require("node:events");
 const net = require("node:net");
 const jsonMultiParse = require("json-multi-parse");
-const uuidv4 = require("uuid/v4");
+const { v4: uuidv4 } = require("uuid");
 
 class JsonRpcClient extends events.EventEmitter {
 	constructor(options) {
