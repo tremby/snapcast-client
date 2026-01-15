@@ -14,7 +14,7 @@
   "homepage": "https://github.com/tremby/snapcast-client",
   "license": "MIT",
   "dependencies": {
-    "json-multi-parse": "^1.4.0",
+    "json-multi-parse": "^1.4.1",
     "uuid": "^9.0.1"
   }
 }
